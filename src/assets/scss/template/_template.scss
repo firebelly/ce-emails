@@ -1,0 +1,178 @@
+// These are the styles to make some of the templates look extra nice.
+// Feel free to remove these styles for production!
+
+// Body Styles
+body,
+html,
+.body {
+  background: #fff !important;
+}
+
+.container.header {
+  background: #fff;
+}
+
+.body-drip {
+  border-top: 8px solid #663399;
+}
+
+// Full Width Header
+.header {
+  background: $ce-blue-lighter;
+
+  .columns {
+    padding-bottom: 0;
+  }
+
+  p {
+    color: #fff;
+    padding-top: 15px;
+  }
+
+  .wrapper-inner {
+    padding: 20px;
+  }
+
+  // Masthead in header
+  .masthead {
+    h3 {
+      color: $ce-blue;
+      strong {
+        color: $white;
+      }
+    }
+    border-bottom: 1px solid $ce-blue;
+  }
+
+  // Logo alignment
+  .ce-logo {
+    margin-top: 30px;
+  }
+}
+
+// Intro section below main header
+.header.intro {
+  background: $ce-blue-lightest;
+
+  .wrapper-inner {
+    padding: 60px 20px 40px 20px;
+  }
+
+  h3 {
+    color: $ce-blue;
+    margin-bottom: 0;
+  }
+  p {
+    color: $black;
+  }
+}
+
+// Main content
+.content {
+  .wrapper-inner {
+    padding: 30px 20px 50px 20px;
+  }
+  p a {
+    color: $ce-red;
+  }
+}
+
+// Pre-footer
+.pre-footer {
+  background: $ce-blue-lighter;
+  .wrapper-inner {
+    padding: 50px 20px 50px 20px;
+  }
+}
+
+// Footer
+.footer {
+  background: $ce-blue;
+  .wrapper-inner {
+    padding: 50px 20px 50px 20px;
+  }
+  table.hr {
+    th {
+      border-color: $ce-blue-lighter;
+    }
+  }
+  a {
+    color: $light-gray;
+    &.no-underline {
+      text-decoration: none;
+    }
+  }
+  p {
+    color: $light-gray;
+  }
+}
+
+
+
+// Logos in header
+.ce-logo {
+  display: block;
+  max-width: 105px;
+  height: auto;
+}
+.the-brief-logo {
+  float: right;
+  display: block;
+  max-width: 164px;
+  height: auto;
+}
+
+// Buttons get serif font
+table.button table td a {
+  font-family: Georgia, serif;
+}
+
+// Article source (Source: ___)
+p.source {
+  font-weight: bold;
+  color: $ce-red;
+  em {
+    color: $ce-black;
+    font-family: Georgia, serif;
+    font-weight: normal;
+  }
+}
+
+// Number counters above each story
+p.counter-sans {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1;
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+ul {
+  padding-left: 1.15em;
+}
+
+// Small text in footer
+p.small {
+  font-size: 12px;
+  line-height: 2;
+}
+
+table.button {
+  table td a {
+    min-width: 300px;
+    text-align: center;
+  }
+  &:hover table td {
+    background: darken($ce-blue, 5%);
+  }
+}
+
+// Mobile styles
+@media only screen and (max-width: #{$global-breakpoint}) {
+  table.button {
+    table td a {
+      min-width: 0!important;
+    }
+  }
+}
