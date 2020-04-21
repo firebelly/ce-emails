@@ -1,5 +1,4 @@
-// These are the styles to make some of the templates look extra nice.
-// Feel free to remove these styles for production!
+// Clarke & Esposito theme
 
 // Body Styles
 body,
@@ -8,15 +7,20 @@ html,
   background: #fff !important;
 }
 
-.container.header {
-  background: #fff;
+// Logos in header and footer
+.ce-logo {
+  display: block;
+  max-width: 105px;
+  height: auto;
+}
+.the-brief-logo {
+  float: right;
+  display: block;
+  max-width: 164px;
+  height: auto;
 }
 
-.body-drip {
-  border-top: 8px solid #663399;
-}
-
-// Full Width Header
+// Main header
 .header {
   background: $ce-blue-lighter;
 
@@ -107,21 +111,6 @@ html,
   }
 }
 
-
-
-// Logos in header
-.ce-logo {
-  display: block;
-  max-width: 105px;
-  height: auto;
-}
-.the-brief-logo {
-  float: right;
-  display: block;
-  max-width: 164px;
-  height: auto;
-}
-
 // Buttons get serif font
 table.button table td a {
   font-family: Georgia, serif;
@@ -148,6 +137,7 @@ p.counter-sans {
   margin-bottom: 5px;
 }
 
+// Custom UL
 ul {
   padding-left: 1.15em;
 }
@@ -158,6 +148,7 @@ p.small {
   line-height: 2;
 }
 
+// Custom button styles
 table.button {
   table td a {
     min-width: 300px;
