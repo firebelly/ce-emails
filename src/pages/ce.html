@@ -19,19 +19,23 @@ subject: CE Template
     <spacer size="30"></spacer>
 
     <div class="masthead" mc:edit="masthead">
-      <h3>March 31, 2020 <strong>• Issue #21 • Black Swan</strong></h3>
+      <div class="blue-bg">
+        <h3>March 31, 2020 <strong>• Issue #21 • Black Swan</strong></h3>
+      </div>
     </div>
 
     <spacer size="10"></spacer>
 
     <div mc:edit="header-intro">
-      <p>Introducing <a href="#">Briefer Yet</a>, the Twitter feed for The Brief. Follow us on Twitter to receive succinct updates on what we are reading and thinking about.</p>
-      <p>Feel free to forward The Brief to your colleagues, who can sign up via the button below.</p>
+      <div class="blue-bg">
+        <p>Introducing <a href="https://twitter.com/briefer_yet">Briefer Yet</a>, the Twitter feed for The Brief. Follow us on Twitter to receive succinct updates on what we are reading and thinking about.</p>
+        <p>Feel free to forward The Brief to your colleagues, who can sign up via the button below.</p>
+      </div>
     </div>
 
     <spacer size="30"></spacer>
     <center>
-      <button class="radius large small-expanded" href="http://foo.com">Get the Brief</button>
+      <button class="radius large small-expanded" href="*|LIST:SUBSCRIBE|*">Get the Brief</button>
     </center>
 
   </container>
@@ -62,19 +66,27 @@ subject: CE Template
     <row class="collapse">
       <columns small="12">
 
-        <div mc:edit="content-title">
+        <div mc:edit="first_item_headline">
           <h1>A Black Swan Alights</h1>
         </div>
 
-        <div mc:repeatable="story-item" mc:variant="Story">
-          <p class="counter-sans">1</p>
+        <div class="item" mc:repeatable="item_listing" mc:variant="Item">
+          <div mc:edit="item_listing_content">
+            <p class="counter-sans">1</p>
 
-          <p>As the coronavirus <a href="http://foo.com/">SARS-CoV-2</a> makes its way through the world, scholarly communications are not unaffected. We have been following the flurry of cancelled or postponed publishing events (London Book Fair, Paris Book Fair, STM Association Meeting, Council of Science Editors, NAS Journal Summit) and cancelled scientific and scholarly meetings (see Item 5 below) amid the wider flurry of adjustments (the cancellation of professional sporting events, the postponement of the Summer Olympics) and the virtual lockdown of major cities and even entire countries. Universities have closed their gates, shifting courses online, labs are shutting down, and fieldwork is being postponed (see Item 12 below). Meanwhile, we see a greater reliance on virtual tools such as Zoom and WebEx. It takes little imagination to see that these developments will continue to ripple outward.</p>
+            <p>As the coronavirus SARS-CoV-2 makes its way through the world, scholarly communications are not unaffected. We have been following the flurry of cancelled or postponed publishing events (London Book Fair, Paris Book Fair, STM Association Meeting, Council of Science Editors, NAS Journal Summit) and cancelled scientific and scholarly meetings (see Item 5 below) amid the wider flurry of adjustments (the cancellation of professional sporting events, the postponement of the Summer Olympics) and the virtual lockdown of major cities and even entire countries. Universities have closed their gates, shifting courses online, labs are shutting down, and fieldwork is being postponed (see Item 12 below). Meanwhile, we see a greater reliance on virtual tools such as Zoom and WebEx. It takes little imagination to see that these developments will continue to ripple outward.</p>
 
-          <p class="source">
-            —<br>
-            Source: <em>Sequoia Capital (via Medium), The Wall Street Journal</em>
-          </p>
+            <p class="source">
+              —<br>
+              Source: <em>Sequoia Capital (via Medium), The Wall Street Journal</em>
+            </p>
+          </div>
+        </div>
+
+        <div mc:repeatable="item_listing" mc:variant="Headline">
+          <div mc:edit="item_listing_headline_content">
+            <h1>A Black Swan Alights</h1>
+          </div>
         </div>
 
       </columns>
@@ -91,7 +103,7 @@ subject: CE Template
         <center>
           <img class="the-brief-logo" src="{{root}}assets/img/the-Brief-Logo.png" alt="The Brief Logo">
           <spacer size="50"></spacer>
-          <button class="radius large small-expanded" href="http://foo.com">Get the Brief</button>
+          <button class="radius large small-expanded" href="*|LIST:SUBSCRIBE|*">Get the Brief</button>
         </center>
       </columns>
     </row>
