@@ -1,5 +1,11 @@
 // Clarke & Esposito theme
 
+// Disable hyphenation
+td {
+  -webkit-hyphens: manual;
+  hyphens: manual;
+}
+
 // Body Styles
 body,
 html,
@@ -7,16 +13,35 @@ html,
   background: #fff !important;
 }
 
+// This should work to put these in the generated <style> output (not inlined) but
+// it's not for some reason, so I'm manually putting it in default.html instead:
+// @media screen {
+//   .item a {
+//     color: $ce-red;
+//   }
+//   .blue-bg a {
+//     color: $ce-blue;
+//   }
+// }
+
 // Logos in header and footer
 .ce-logo {
   display: block;
-  max-width: 105px;
+  width: 105px;
+  max-width: 100%;
+  height: auto;
+}
+.ce-bird-logo {
+  display: block;
+  width: 186px;
+  max-width: 100%;
   height: auto;
 }
 .the-brief-logo {
   float: right;
   display: block;
-  max-width: 164px;
+  width: 164px;
+  max-width: 100%;
   height: auto;
 }
 
@@ -52,11 +77,6 @@ html,
   .blue-bg {
     background: $ce-blue-lighter;
   }
-
-  // Logo alignment
-  .ce-logo {
-    margin-top: 30px;
-  }
 }
 
 // Intro section below main header
@@ -81,9 +101,8 @@ html,
   .wrapper-inner {
     padding: 30px 20px 50px 20px;
   }
-  p a {
-    // this doesn't work with mailchimp:
-    color: $ce-red!important;
+  .item a {
+    color: $ce-red;
   }
 }
 
@@ -125,7 +144,8 @@ table.button table td a {
 // Article source (Source: ___)
 p.source {
   font-weight: bold;
-  color: $ce-red;
+  color: $ce-blue;
+  font-size: 14px;
   em {
     color: $ce-black;
     font-family: Georgia, serif;
