@@ -16,10 +16,7 @@ html,
 // This should work to put these in the generated <style> output (not inlined) but
 // it's not for some reason, so I'm manually putting it in default.html instead:
 // @media screen {
-//   .item a {
-//     color: $ce-red;
-//   }
-//   .blue-bg a {
+//   .blue-links a {
 //     color: $ce-blue;
 //   }
 // }
@@ -102,7 +99,7 @@ html,
     padding: 30px 20px 50px 20px;
   }
   .item a {
-    color: $ce-red;
+    color: $ce-blue;
   }
 }
 
@@ -141,15 +138,20 @@ table.button table td a {
   font-family: Georgia, serif;
 }
 
-// Article source (Source: ___)
+// Article source
 p.source {
-  font-weight: bold;
-  color: $ce-blue;
+  color: $ce-black;
   font-size: 14px;
-  em {
-    color: $ce-black;
-    font-family: Georgia, serif;
-    font-weight: normal;
+  margin-top: -8px;
+  font-family: Georgia, serif;
+  .emdash {
+    font-family: Helvetica, Arial, sans-serif;
+    color: $ce-blue;
+  }
+  .label {
+    color: $ce-blue;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
   }
 }
 
@@ -158,7 +160,7 @@ p.counter-sans {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 32px;
   font-weight: bold;
-  line-height: 1;
+  line-height: 100%;
   margin-top: 30px;
   margin-bottom: 5px;
 }
@@ -171,14 +173,21 @@ ul {
 // Small text in footer
 p.small {
   font-size: 12px;
-  line-height: 2;
+  line-height: 200%;
 }
 
 // Custom button styles
-table.button {
+table.button.large {
+  td {
+    mso-line-height-rule: exactly;
+    line-height: 100%;
+  }
   table td a {
     min-width: 300px;
     text-align: center;
+    mso-line-height-rule: exactly;
+    line-height: 100%;
+    padding: 20px;
   }
   &:hover table td {
     background: darken($ce-blue, 5%);
